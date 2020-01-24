@@ -18,7 +18,7 @@
 
 <script data-role="slide" data-markdown type="text/html">
 # Software Development for the Web
-## HTML, CSS
+## HTML, CSS, JavaScript
 ### Mikael Roos
 </script>
 
@@ -112,30 +112,38 @@
 
 <h1>About me</h1>
 <p>Here is my own me-page.
-<img src="img/me.jpg" class="me" alt="Image on Mikael Roos">
+<img src="img/me.jpg" class="me"
+ alt="Image on Mikael Roos">
 ```
 
 </script>
 
 
 
-<!-- Slide -->
 <script data-role="slide" data-markdown type="text/html">
 # To use elements
 
 * How many elements are there?
     * 120 in the standard?
     * 20-40 on an average site?
-* HTML 4 versus HTML 5 (5.1, 5.2, etc)
+* HTML 4 versus HTML 5 (5.1, 5.2, etc) versus XHTML
 * Anonymous elements (div, span)
-* Semantic elements (header, footer, nav)
-* Block and Inline
+* Semantic elements (header, footer, nav, section, article)
 
 </script>
 
 
 
-<!-- Slide -->
+<script data-role="slide" data-markdown type="text/html">
+# Block / Inline
+
+* Block (div, h1, p, ul, ol, table)
+* Inline (span, s, i, img, a)
+
+</script>
+
+
+
 <script data-role="slide" data-markdown type="text/html">
 # CSS
 </script>
@@ -238,6 +246,7 @@ h1 { font-weight: bold; }
 # Style where?
 
 * External stylesheet in separate file
+    * `<link rel="stylesheet" href="style.css">`
 * Embedded in HTML page head
     * `<head><style>   </style></head>`
 * Inline style in the element
@@ -304,8 +313,8 @@ Short answer:
 <script data-role="slide" data-markdown type="text/html">
 # Where to learn more basics?
 
-"[Google Search Engine Optimization
-Starter Guide](https://static.googleusercontent.com/media/www.google.co.uk/en/uk/webmasters/docs/search-engine-optimization-starter-guide.pdf)"
+* [Google Search Engine Optimization
+Starter Guide](https://static.googleusercontent.com/media/www.google.co.uk/en/uk/webmasters/docs/search-engine-optimization-starter-guide.pdf)
 * [SMACSS Scalable and Modular Architecture for CSS](http://smacss.com/book/)
 
 </script>
@@ -313,10 +322,12 @@ Starter Guide](https://static.googleusercontent.com/media/www.google.co.uk/en/uk
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Last word of advice
+# Validators
 
 * Use the validator to check your code
-* https://validator.w3.org/unicorn/check
+    * [HTML](https://validator.w3.org/)
+    * [CSS](https://jigsaw.w3.org/css-validator/)
+    * [Unicorn](https://validator.w3.org/unicorn/check)
 
 </script>
 
@@ -346,6 +357,7 @@ Starter Guide](https://static.googleusercontent.com/media/www.google.co.uk/en/uk
 * More dynamic than CSS can provide
 * Animations
 * Fetch, display, without reload
+* Validate (form) before post
 * Graphical widgets
 
 </script>
