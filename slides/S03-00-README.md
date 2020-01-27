@@ -46,7 +46,7 @@ Fix this Mikael
 
     1. Publish requirements on project
 
-1. Publish videos and link to them
+1. Publish videos and link to them (DONE)
 
 1. Link to the slides (in Canvas)
 
