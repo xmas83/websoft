@@ -50,6 +50,8 @@ Fix this Mikael
 
 1. Link to the slides (in Canvas)
 
+1. About CORS (link to info).
+
 
 Tomorrow fixes
 1. (How to setup XAMPP)
