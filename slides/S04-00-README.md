@@ -5,6 +5,7 @@ Morning
 ----------------------
 
 1. Status according to recommended study plan
+    * How do we feel this far?
 
 1. About CORS (updated example program, see chat)
 
