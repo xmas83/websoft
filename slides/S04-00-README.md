@@ -4,6 +4,8 @@ What to do today?
 Morning
 ----------------------
 
+1. Status according to recommended study plan
+
 1. About CORS (updated example program, see chat)
 
 1. About slides and videos (message on Canvas)
