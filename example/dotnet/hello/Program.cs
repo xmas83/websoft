@@ -78,6 +78,13 @@ namespace hello
 
             Iterate();
 
+            // Print out the incoming variables
+            Console.WriteLine("Here are the incoming arguments from the command line:");
+            foreach(var item in args)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
             //return 1;
             return 0;
         }
