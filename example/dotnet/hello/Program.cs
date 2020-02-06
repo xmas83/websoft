@@ -1,4 +1,8 @@
-﻿using System;
+/**
+ * Read more examples in the tutorials
+ * https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/
+ */﻿
+using System;
 
 namespace hello
 {

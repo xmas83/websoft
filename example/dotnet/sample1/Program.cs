@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace sample1
@@ -9,17 +10,21 @@ namespace sample1
         static void Main(string[] args)
         {
             String file = "../data/bank.json";
+
             using (StreamReader r = new StreamReader(file))
             {
-                string json = r.ReadToEnd();
+                var json;
+                string data = r.ReadToEnd();
+
+                json = JsonSerializer.Deserialize<Account>(data);
                 Console.WriteLine(json);
                 
                 // List<Item> items = JsonConvert.DeserializeObject<List<Item>>(json);
-                dynamic items = JsonConvert.DeserializeObject(json);
-                foreach(var item in items)
-                {
-                    Console.WriteLine("{0} {1}", item.temp, item.vcc);
-                }
+                // dynamic items = JsonConvert.DeserializeObject(json);
+                // foreach(var item in items)
+                // {
+                //     Console.WriteLine("{0} {1}", item.temp, item.vcc);
+                // }
             }
         }
     }
