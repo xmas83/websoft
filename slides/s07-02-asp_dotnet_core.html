@@ -31,6 +31,90 @@
 * ASP.NET Core
 * MVC
 * Razor
+* Design patterns (framework)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ASP.NET
+
+* Extends .NET developer platform with tools and libraries specifically for building web apps.
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ASP.NET adds
+
+* Base framework for processing web requests
+* Web-page templating syntax Razor
+    * dynamic web pages using C#
+* Libraries for common web patterns
+    * Model View Controller (MVC)
+    * and more
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ASP.NET adds...
+
+* Authentication system that includes
+    * libraries
+    * a database
+    * template pages for handling logins
+    * multi-factor authentication
+    * external authentication with Google, Twitter, and more.
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ASP.NET adds...
+
+* Editor extensions 
+    * syntax highlighting
+    * code completion
+    * functionality specifically for developing web pages
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# C# backend
+
+* C# for business logic and data access.
+* .NET ecosystem of packages and libraries
+* Author your own libraries (nuget).
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Razor
+
+* Template language
+* Rendered server side
+* HTML/CSS and C#
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Client side
+
+* Code client side is JavaScript
+* ASP.NET integrates with SPA frameworks
+    * React
+    * Angular
 
 </script>
 
@@ -39,11 +123,18 @@
 <script data-role="slide" data-markdown type="text/html">
 # ASP.NET Core
 
-* Free, open source
-* Cross platform
-* Development environment
-    * `dotnet`
-* Version 3.1
+* Open-source and cross-platform version of ASP.NET
+* Use ASP.NET Core for new applications
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# ASP.NET (Windows only)
+
+* The Windows-only versions of ASP.NET, that existed before ASP.NET Core, is typically just referred to as ASP.NET.
+* The majority of innovation occurs in ASP.NET Core, but other versions continue to receive minor updates and bug-fixes.
 
 </script>
 
@@ -52,6 +143,7 @@
 <script data-role="slide" data-markdown type="text/html">
 # Video serie
 
+* Starting point
 * ASP.NET Core 101 (13 videos)
 * Visual Studio 2019 (click magic)
 * Complete example on how to build a webapp, including Pages, Models, Services, Controllers, Razor with Components
@@ -94,6 +186,7 @@
 * Services
 * MVC
 * C#
+* JSON, XML, etc
 
 </script>
 
@@ -235,6 +328,18 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
+# Web frameworks
+
+* Server side
+* Client side
+* Helpers
+* May need several componens/frameworks to make a complete application suite
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
 # General design patterns
 
 </script>
@@ -279,7 +384,7 @@
 <script data-role="slide" data-markdown type="text/html">
 # Coupling / Cohesion
 
-* May become an while building unit tests
+* May become an issue while building unit tests
 
 </script>
 
@@ -351,7 +456,7 @@
 * Basic concept of a framework
 * "Don't call us, we call you."
 * Who is in control of what is used
-* Vem anropar vem?
+* Who calls who?
 
 </script>
 
@@ -377,8 +482,8 @@
 # Example on webapp
 
 ```
-dotnet new Webapp --no-https -o webapp
-cd webapp
+dotnet new webapp --no-https -o MyWebapp
+cd MyWebapp
 dotnet watch run
 ```
 
