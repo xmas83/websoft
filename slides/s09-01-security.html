@@ -46,15 +46,15 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
-# What is a hacker?
+# What does a hacker want?
 
-* What does a hacker want?
-    * Money
-    * Control
-    * Resources
-    * Own agenda, activist
-    * Feel the power
-    * A challenge and show off "I can do it"
+* Money
+* Control
+* Resources
+* Own agenda, activist
+* Feel the power, "I own you"
+* A challenge and show off "I can do it"
+* Fun of problem solving
 * Is time a limit?
 
 </script>
@@ -85,8 +85,7 @@
 * Hacking with the permissions of the system owner
 * To determine system vulnerabilities and weaknesses
 * To test and validate an organisations
-    * information security measures
-    * and maturity
+    * Information security measures and maturity
 
 </script>
 
@@ -95,11 +94,12 @@
 <script data-role="slide" data-markdown type="text/html">
 # The circle of hack
 
-* System
-* Protection
-* Attack
-* Defence
-* Restore
+* View as _attacker/hacker_ or as _system owner_
+    * System
+    * Protection
+    * Attack
+    * Defence
+    * Restore
 
 </script>
 
@@ -108,14 +108,13 @@
 <script data-role="slide" data-markdown type="text/html">
 # Grade the level of concern
 
-* Protect assets
+* As system owner, protect your assets, keep a balance
 * Low - High
     * Cost to protect
     * Probability to exploit
     * Impact if breached
     * Level of detectability
     * Cost to restore
-* Keep a balance
 
 </script>
 
@@ -128,13 +127,22 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
-# OWASP Top Ten 2017...
+# OWASP Top Ten 2017
 
 * 1 Injection
 * 2 Broken authentication
 * 3 Sensitive Data Exposure
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# OWASP Top Ten 2017
+
 * 4 XML External Entites (XXE)
 * 5 Broken Access Control 
+* 6 Security Misconfiguration
 
 </script>
 
@@ -143,7 +151,6 @@
 <script data-role="slide" data-markdown type="text/html">
 # OWASP Top Ten...
 
-* 6 Security Misconfiguration
 * 7 Cross-Site Scripting XSS
 * 8 Insecure Deserialization
 * 9 Using Components with Known Vulnerabilities
@@ -157,90 +164,167 @@
 # Danger areas
 
 * Host system
-    * Login
-        * Repeated tries
-        * Bad passwords
-        * SSH keys (with passwords? backup?)
-    * Open ports
-        * To all internet or only local network
-    * Physical access
-        * Boot to single user
-</script>
-
-
-
-<script data-role="slide" data-markdown type="text/html">
-# Danger areas...
-
-* Web Application
-    * Login
-        * Repeated tries
-        * Bad passwords
-        * Reset password (login service)
-        * Two  factor authentication
-        * Password manager
-    * Protocol
-        * Data sent
-    * Incoming data
-
-</script>
-
-
-
-<script data-role="slide" data-markdown type="text/html">
-# Danger areas...
-
 * Web Application extra
-    * SSH access
-    * Database server
-    * Web server configuration
-    * External modules
-
-</script>
-
-
-
-<script data-role="slide" data-markdown type="text/html">
-# Danger areas...
-
 * Web Application
-    * $_SERVER, $_POST, $_GET, $_SESSION, $_COOKIES
-    * Steal secrets
-    * Inject code
-    * Verbose error handling (development versus production system)
-    * Log in to system (as admin user)
-    * Take control of web application and host system
+* Web Application Internals
 
 </script>
 
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Hacker common attacks
+# Host system
+
+* Login
+    * Repeated tries
+    * Bad passwords
+    * SSH keys (with passwords? backup?)
+* Open ports
+    * To all internet or only local network
+* Physical access
+    * Boot to single user
 
 </script>
 
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Rasberry pi
+# Web Application extra
 
-* Standard root user with known password
+* SSH access
+* Database server
+* Web server configuration
+* External modules and services
+* Software as a service
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application
+
+* GUI affecting state or gaining control
+* Incoming data
+* Authentication and Authorization
+* Protocol
+    * Data sent
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application Login
+
+* Repeated tries
+* Bad passwords (users / system storing / handling)
+* Automated login (cookie)
+* Session time to live
+* Reset password
+* Authentication service
+* Two factor authentication
+* Password manager
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application Internals
+
+* $_GET
+* $_POST
+* $_FILE
+* $_SERVER
+* $_SESSION
+* $_COOKIES
+* Verbose error handling (development versus production system)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application Helpers
+
+* Prepared statements, no multiqueries
+* `isset()` `empty()` `??`
+* `htmlentities()`
+* `strip_tags()`
+* `is_numeric()` `is_string()`
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application Helpers...
+
+* `?sort=descending`
+
+```
+$orderby = $_GET["sort"] ?? null;
+$sql = "SELECT * FROM user ORDER BY name $orderby";
+
+// Check in value domain
+$orderbyValid = ["asc", "desc"];
+if (!in_array($orderby, $orderbyValid)) {
+    die("500 Invalid incoming");
+}
+```
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application Helpers...
+
+* `password_hash()` `password_verify()`
+
+<img src="https://www.php.net/manual/en/images/2a34c7f2e658f6ae74f3869f2aa5886f-crypt-text-rendered.svg" style="width: 100%; background-color: white;">
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Example of some attacks
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+
+# Spam is dangerous?
+
+* [Style](https://arkiv.dbwebb.se/style//?id=157)
+* [Guestbooks](https://dbwebb.se/forum/viewtopic.php?t=637&p=3737)
+* [Forum](https://dbwebb.se/forum/viewtopic.php?f=21&t=8738)
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Raspberry pi
+
+* Put it as a gateway to your home network
+* Standard user pi:raspberry
 * Consequenses of a break in?
-* How to protect
+* How to protect?
 * How to clean up?
 
 </script>
 
 
-
+<!--
 <script data-role="slide" data-markdown type="text/html">
 
 * [Best practice JWT login token](https://dbwebb.se/forum/viewtopic.php?f=11&t=8923)
 
 </script>
-
-
+-->
 
 
 
@@ -261,20 +345,37 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Att leta exploits
+# How to find an exploit
 
-* Hur jobbar en hackare?
-* [Svaghet på svaghet och till slut](https://dbwebb.se/forum/viewtopic.php?t=1702#p37302)
+This means that we need to wait a full week in order to exploit our vulnerability, as this is the time frame that takes that draft to be deleted. Fortunately for us, tokens usually last 24 hours, allowing us to retrieve the token a day before the expected deletion date, and using it in order to get into ‘edit_post()’ after the draft gets deleted.
 
 </script>
 
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Stressa systemet
+# How to find an exploit...
 
-* En stressad webbplats kan ge lite väl tydliga felmeddelanden.
-* Stressa MySQL med "to many connections"
+Finally, after passing the token validation, the privileges validation, the basic admin validation, and the post ID validation, changing the post status to ‘trash’ is as simple as sending an HTTP parameter. Thank God.
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# How to find an exploit...
+
+Combining all of these bypasses together, we use a chain of around a dozen different bugs, a faulty privilege system, and about every false assumption in the system to achieve partial editor privileges. The road to a critical vulnerability is still long, but at its end we found both a SQLi and an XSS, to be described in the next posts.
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Stress the system
+
+* A stressed web application can provide some useful error messages
+* How about MySQL with "to many connections"?
 
 </script>
 
@@ -290,21 +391,9 @@
 
 <script data-role="slide" data-markdown type="text/html">
 
-* Consequences on max connections on student server
+* Consequences on max connections on a shared server
 * Production server -> no verbose error handling
 * Log errors to file
-
-</script>
-
-
-
-<script data-role="slide" data-markdown type="text/html">
-
-# Spam
-
-* [Style](https://arkiv.dbwebb.se/style//?id=157)
-* [Guestbooks](https://dbwebb.se/forum/viewtopic.php?t=637&p=3737)
-* [Forum](https://dbwebb.se/forum/viewtopic.php?f=21&t=8738)
 
 </script>
 
@@ -339,16 +428,14 @@ Dig deeper into some of these, and show example.
 9. Using Components with Known Vulnerabilities
 10. Insufficient Logging &amp; Monitoring
 
-
-https://dbwebb.se/forum/viewtopic.php?f=12&t=1702 (show functions that help you)
-(even for login/save passwords)
-
 </script>
 
 
 
 <script data-role="slide" data-markdown type="text/html">
 # Example XSS
+
+https://dbwebb.se/forum/viewtopic.php?f=12&t=1702#p46756
 
 </script>
 
@@ -363,6 +450,15 @@ https://dbwebb.se/forum/viewtopic.php?f=12&t=1702 (show functions that help you)
 
 <script data-role="slide" data-markdown type="text/html">
 # Example file injection
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Example remote code execution
+
+https://dbwebb.se/forum/viewtopic.php?f=12&t=1702#p27398
 
 </script>
 
