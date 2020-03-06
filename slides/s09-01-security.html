@@ -251,9 +251,45 @@
 <script data-role="slide" data-markdown type="text/html">
 # Web Application helpers
 
-* Prepared statements with ?, no multiqueries
-* `isset()` `empty()` `??`
+* SQL
+* Prepared statements
+* Use placeholders ? and ??
+* Avoid multiqueries
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application helpers...
+
+* Checkers to identify a valid value
+* `isset()` `empty()`
+* `??` (null coalesce operator)
 * `is_numeric()` `is_string()`
+* `ctype_digit()` `ctype_alpha()`
+* Regular expressions
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application helpers...
+
+* Validate and Sanitize
+* `filter_var($email, FILTER_VALIDATE_EMAIL)`
+* `filter_var($email, FILTER_SANITIZE_EMAIL)`
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application helpers...
+
+* User supplied content (blog, comments)
+* Save as is, escape on print
 * `htmlentities()`
 * `strip_tags()`
 
@@ -264,9 +300,7 @@
 <script data-role="slide" data-markdown type="text/html">
 # Web Application helpers...
 
-* User supplied Content
-* Save as is, escape on print
-* `htmlentities()` `strip_tags()`
+* Lets review a [code sample for XSS](https://github.com/Webbprogrammering/websoft/blob/master/example/security/xss_codesample.php) injection and how to avoid it.
 
 </script>
 
@@ -275,7 +309,11 @@
 <script data-role="slide" data-markdown type="text/html">
 # Web Application helpers...
 
-* Lets review a [code sample for XSS]() injection and how to avoid it.
+* User supplied content (blog, comments)
+* WYSIWYG editors
+* Markdown (parsers)
+* HTMLPurify
+* What tags to allow, `<?php ?>` ?
 
 </script>
 
@@ -284,7 +322,7 @@
 <script data-role="slide" data-markdown type="text/html">
 # Web Application helpers...
 
-* `?sort=descending`
+* `?sort=descending` (SQL injection?)
 
 ```
 $orderby = $_GET["sort"] ?? null;
@@ -304,7 +342,8 @@ if (!in_array($orderby, $orderbyValid)) {
 <script data-role="slide" data-markdown type="text/html">
 # Web Application helpers...
 
-* `password_hash()` `password_verify()`
+* Avoid `md5()` `sha()`
+* Use `password_hash()` `password_verify()`
 
 <img src="https://www.php.net/manual/en/images/2a34c7f2e658f6ae74f3869f2aa5886f-crypt-text-rendered.svg" style="width: 100%; background-color: white;">
 </script>
@@ -321,7 +360,7 @@ if (!in_array($orderby, $orderbyValid)) {
 
 # Spam is dangerous?
 
-* [Style](https://arkiv.dbwebb.se/style//?id=157)
+* [Style](https://arkiv.dbwebb.se/style//?id=157) ([spam](https://arkiv.dbwebb.se/style//?id=1999))
 * [Guestbooks](https://dbwebb.se/forum/viewtopic.php?t=637&p=3737)
 * [Forum](https://dbwebb.se/forum/viewtopic.php?f=21&t=8738)
 
@@ -339,6 +378,38 @@ if (!in_array($orderby, $orderbyValid)) {
 * How to clean up?
 
 </script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# `source.php`
+
+* [`source.php?path=work/me.php`](https://arkiv.dbwebb.se/kod-exempel/source.php)
+* As an aid in teaching and showing the source code of student submission on a live server
+
+</script>
+
+
+<!--
+<script data-role="slide" data-markdown type="text/html">
+# Shared server
+
+* ake1 include other phpscripts
+
+</script>
+-->
+
+
+
+<!--
+<script data-role="slide" data-markdown type="text/html">
+# Execute others code
+
+* locally, as when correcting submissions
+
+</script>
+-->
+
 
 
 <!--
@@ -424,12 +495,28 @@ Combining all of these bypasses together, we use a chain of around a dozen diffe
 
 <script data-role="slide" data-markdown type="text/html">
 
-# Stolen website
+# Stolen website traffic
 
-* Steal SEO [take 1](https://dbwebb.se/forum/viewtopic.php?f=21&t=6598) [take 2](https://dbwebb.se/forum/viewtopic.php?f=21&t=7306)
-* [Iframe clickjacking stealing identities](https://dbwebb.se/forum/viewtopic.php?f=23&t=7359)
+* Steal SEO and traffic
+* [take 1](https://dbwebb.se/forum/viewtopic.php?f=21&t=6598) [take 2](https://dbwebb.se/forum/viewtopic.php?f=21&t=7306)
+* Consider detect, impact, restore
+* Update Apache configuration
+    * Block known spambots
+    * Block access by HTTP_REFERER
 
-Show website apache configuration.
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+
+# Stolen website identity
+
+* Stealing identities [Iframe clickjacking](https://dbwebb.se/forum/viewtopic.php?f=23&t=7359)
+* Consider detect, impact, restore
+* Update Apache configuration 
+
+`Header always append X-Frame-Options SAMEORIGIN`
 
 </script>
 
@@ -437,8 +524,6 @@ Show website apache configuration.
 
 <script data-role="slide" data-markdown type="text/html">
 # OWASP Top Ten 2017
-
-Dig deeper into some of these, and show example.
 
 1. Injection
 2. Broken authentication
@@ -454,7 +539,7 @@ Dig deeper into some of these, and show example.
 </script>
 
 
-
+<!--
 <script data-role="slide" data-markdown type="text/html">
 # Example XSS
 
@@ -498,7 +583,7 @@ https://dbwebb.se/forum/viewtopic.php?f=12&t=1702#p27398
 # Example Login using ==
 
 </script>
-
+-->
 
 
 <script data-role="slide" data-markdown type="text/html">
@@ -511,11 +596,12 @@ https://dbwebb.se/forum/viewtopic.php?f=12&t=1702#p27398
 * Check incoming value domain and type
 * Fail when corrupt input
 * "Fail hard, fail early"
+* Escape data on output
 
 </script>
 
 
-
+<!--
 <script data-role="slide" data-markdown type="text/html">
 # Validate incoming...
 
@@ -528,19 +614,33 @@ CSRF
 Injection SQL, file include, remote code execution
 
 </script>
-
+-->
 
 
 <script data-role="slide" data-markdown type="text/html">
 # Final words
 
 * You can never be completely secure
-* Crash and recovery plan
 * What is the worst that can happen?
-    * Low/high impact, low/high effort to restore
-* Protect yorself with means neccassary that are defensible in economic terms and relates to impact/effort estimate
 * Incident response plan
+* Crash and recovery plan
 * Restore your backup
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Final words...
+
+> Protect yorself with means neccassary that are defensible in economic terms and relates to a balance of your estimated
+
+* Cost to protect
+* Probability to exploit
+* Impact if breached
+* Level of detectability
+* Cost to restore
+
 
 </script>
 
@@ -549,8 +649,20 @@ Injection SQL, file include, remote code execution
 <script data-role="slide" data-markdown type="text/html">
 # Learn more?
 
+* Learn the operating system (Linux or Windows) as a client and as a server
+* Learn to write a server/service
+* Study on how to write good and clean code
+* Put a Pi as a gateway to your own home...
 * Capture The Flag (CTF)
 
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# If there is time
+
+* [Some code samples](https://github.com/dbwebb-se/htmlphp/tree/master/example/security)
 
 </script>
 
