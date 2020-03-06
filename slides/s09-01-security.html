@@ -19,7 +19,7 @@
 <!-- Here comes the slides in order -->
 <script data-role="slide" data-markdown type="text/html">
 # Software Development for the Web
-## Web Security
+## Web Application Security
 ### Mikael Roos
 </script>
 
@@ -29,7 +29,7 @@
 # Agenda
 
 * Security in general
-* Web Security
+* Web Application Security
 * OWASP Top Ten
 * Examples
 
@@ -166,7 +166,10 @@
 * Host system
 * Web Application extra
 * Web Application
-* Web Application Internals
+* Web Application
+    * internals
+    * login
+    * helpers
 
 </script>
 
@@ -205,8 +208,8 @@
 # Web Application
 
 * GUI affecting state or gaining control
-* Incoming data
 * Authentication and Authorization
+* Incoming data
 * Protocol
     * Data sent
 
@@ -215,7 +218,7 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Web Application Login
+# Web Application login
 
 * Repeated tries
 * Bad passwords (users / system storing / handling)
@@ -231,7 +234,7 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Web Application Internals
+# Web Application internals
 
 * $_GET
 * $_POST
@@ -246,20 +249,40 @@
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Web Application Helpers
+# Web Application helpers
 
-* Prepared statements, no multiqueries
+* Prepared statements with ?, no multiqueries
 * `isset()` `empty()` `??`
+* `is_numeric()` `is_string()`
 * `htmlentities()`
 * `strip_tags()`
-* `is_numeric()` `is_string()`
 
 </script>
 
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Web Application Helpers...
+# Web Application helpers...
+
+* User supplied Content
+* Save as is, escape on print
+* `htmlentities()` `strip_tags()`
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application helpers...
+
+* Lets review a [code sample for XSS]() injection and how to avoid it.
+
+</script>
+
+
+
+<script data-role="slide" data-markdown type="text/html">
+# Web Application helpers...
 
 * `?sort=descending`
 
@@ -279,7 +302,7 @@ if (!in_array($orderby, $orderbyValid)) {
 
 
 <script data-role="slide" data-markdown type="text/html">
-# Web Application Helpers...
+# Web Application helpers...
 
 * `password_hash()` `password_verify()`
 
