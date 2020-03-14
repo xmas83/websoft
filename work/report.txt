@@ -1,0 +1,10 @@
+
+•	Did you before know about the techniques Git, GitHub, Markdown and/or GitHub Pages?
+I knew about Git and some of its functionalities but never used Markdown and Github pages. It was first time that I did use them, and I found them quite helpful and interesting. 
+•	Have you ever created websites before?
+I did but not much. I think it was a few months ago and I was watching some Youtubes tutorials on how to build a website using JS and react.js. and that made me to follow some other web developers on Youtube to do a lil more web development. I guess web development is what I want to do in the future as a software developer as I believe it is fun and there are still a lot to learn as the web development technologies are always being updated and it’s kind of cool working and learning brand new technologies and not stick with a specific library or framework for years. 
+•	Briefly explain your experience and knowledge of web application development.
+During my studies at Kristianstad Uni we didn’t do much web application development except one or two projects using Java, Javafx and SQL. 
+What is your TIL for this course section?
+Learning more about Gitgub including Gitpages and some git commands such as Git commit, Git status. I also learned about HTML tags including <a> tag and how to link different html files together even when they are not all located in the same folder. 
+
