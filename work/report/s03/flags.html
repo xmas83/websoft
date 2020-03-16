@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/flag-style.css">
+    <style>
+        span {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        a {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body onload="startDuckGame()">
+    <div style="padding: 20px; background-color: thistle;">
+        <header>
+            <div class="nav-bar">
+                <div class="nav-bar-top">
+                    <div class="bar-item-left">
+                        <h2 style="color: white;">MY PAGE</h2>
+                    </div>
+                    <ul class="bar-item-right">
+                        <li>
+                            <a href="../s01/home.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="../s02/about.html">ABOUT</a>
+                        </li>
+                        <li><a class="active" style="display: block;" href="">REPORTS</a>
+                            <ul class="submenu">
+                                <li><a href="flags.html">Flags</a></li>
+                                <li><a href="./schools.html">Schools</a></li>
+                                <li><a href="../s02/report.html">Written reports</a></li>
+                            </ul>
+                        </li>
+                        <li class="me">
+                            <a style="width: 10px;margin-left: 5px;" href="../s02/me.html">ME</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-bar-bottom"></div>
+            </div>
+        </header>
+    </div>
+    <section>
+        <div style="margin:20px">
+            <h2>FLAGS DISPLAY</h2>
+        </div>
+        <div class="top-box">
+            <p style="margin: 0 auto"><b>RULES: </b>Click on a country name to display the corresponding country's flag. When the flag is displayed, hide the flag by clicking on it. All flags are made just from html and css. A smooth transition can be observed from displayed to
+                not displayed.
+            </p>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <div class="middle-box">
+                <div class="flag" id="cmr"><b style="cursor: pointer;">Cameroon</b></div>
+                <div class="flag" id="swe"><b style="cursor: pointer;">Sweden</b></div>
+                <div class="flag" id="gr"><b style="cursor: pointer;">Greece</b></div>
+            </div>
+
+        </div>
+        <div>
+            <div class="bottom-box">
+                <div id="flag-container"></div>
+            </div>
+
+        </div>
+    </section>
+    <img src="../img/duck.png" id="myduck" alt="myduck-img">
+    <script src="../js/flag_script.js"></script>
+    <script src="../js/myduck_script.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer-top">
+    </div>
+    <div class="footer-bottom">
+        <div style="text-decoration: underline;margin: 10px;">
+            CONCTACT
+        </div>
+        <a class="email" style="text-decoration: none" href="mailto:nnstephan9@yahoo.com?Subject=Hello%20again" target="_top">nnstephan9@yahoo.com</a><br>07034XXXXXX
+    </div>
+    <div>
+        <div onclick="window.open('https://www.facebook.com/stephane.ngaha','blank')" class="sm" style="text-align: end;">
+            <img class="icon-fb" src="../img/fb.png" alt="">
+        </div>
+        <div onclick="window.open('https://www.linkedin.com/in/stephan-ngaha-323274179/','blank')" class="sm" style="text-align: start;">
+            <img class="icon-lkin" src="../img/Lkin.png" alt="">
+        </div>
+    </div>
+    </div>
+</footer>
+
+</html>
