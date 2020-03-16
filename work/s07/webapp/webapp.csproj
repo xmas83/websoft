@@ -1,0 +1,146 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="WebApplication\Controllers\HomeController.cs" />
+    <Compile Remove="WebApplication\Startup.cs" />
+    <Compile Remove="WebApplication\Program.cs" />
+    <Compile Remove="WebApplication\obj\Release\netcoreapp3.1\WebApplication2.RazorAssemblyInfo.cs" />
+    <Compile Remove="WebApplication\obj\Release\netcoreapp3.1\WebApplication2.AssemblyInfo.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.RazorAssemblyInfo.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.AssemblyInfo.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.RazorTargetAssemblyInfo.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Search.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Getid.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Delete.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Get.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs" />
+    <Compile Remove="WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs" />
+    <Compile Remove="WebApplication\Models\ErrorViewModel.cs" />
+    <Compile Remove="WebApplication\Models\Account.cs" />
+    <Compile Remove="services\Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.dll" />
+    <None Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.pdb" />
+    <None Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.exe" />
+    <None Remove="WebApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll" />
+    <None Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.Views.dll" />
+    <None Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.Views.pdb" />
+    <None Remove="WebApplication\obj\WebApplication2.csproj.nuget.cache" />
+    <None Remove="WebApplication\obj\WebApplication2.csproj.nuget.g.targets" />
+    <None Remove="WebApplication\obj\WebApplication2.csproj.nuget.g.props" />
+    <None Remove="WebApplication\obj\Release\netcoreapp3.1\WebApplication2.RazorAssemblyInfo.cache" />
+    <None Remove="WebApplication\obj\Release\netcoreapp3.1\WebApplication2.AssemblyInfoInputs.cache" />
+    <None Remove="WebApplication\obj\Release\netcoreapp3.1\WebApplication2.assets.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.dll" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.RazorTargetAssemblyInfo.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.RazorAssemblyInfo.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.csproj.CopyComplete" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.TagHelpers.input.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.pdb" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.exe" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.RazorCoreGenerate.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.TagHelpers.output.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.AssemblyInfoInputs.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.csprojAssemblyReference.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.Views.dll" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.csproj.FileListAbsolute.txt" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.assets.cache" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\WebApplication2.Views.pdb" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\WebApplication2.StaticWebAssets.xml" />
+    <None Remove="WebApplication\obj\Debug\netcoreapp3.1\staticwebassets\WebApplication2.StaticWebAssets.Manifest.cache" />
+    <None Remove="WebApplication\wwwroot\favicon.ico" />
+    <None Remove="WebApplication\wwwroot\css\site.css" />
+    <None Remove="WebApplication\wwwroot\js\site.js" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\LICENSE" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Remove="WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Remove="WebApplication\wwwroot\lib\jquery\LICENSE.txt" />
+    <None Remove="WebApplication\wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Remove="WebApplication\wwwroot\lib\jquery\dist\jquery.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Remove="WebApplication\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="WebApplication\appsettings.Development.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.runtimeconfig.dev.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json" />
+    <Content Remove="WebApplication\appsettings.json" />
+    <Content Remove="WebApplication\appsettings.Development.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\appsettings.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.deps.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.runtimeconfig.dev.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\appsettings.Development.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\WebApplication2.runtimeconfig.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\Properties\launchSettings.json" />
+    <Content Remove="WebApplication\bin\Debug\netcoreapp3.1\data\acount.json" />
+    <Content Remove="WebApplication\Views\_ViewImports.cshtml" />
+    <Content Remove="WebApplication\Views\_ViewStart.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Privacy.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Get.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Edit.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Getid.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Search.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Delete.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Create.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Index.cshtml" />
+    <Content Remove="WebApplication\Views\Home\Details.cshtml" />
+    <Content Remove="WebApplication\Views\Shared\_Layout.cshtml" />
+    <Content Remove="WebApplication\Views\Shared\Error.cshtml" />
+    <Content Remove="WebApplication\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <Content Remove="WebApplication\obj\project.assets.json" />
+    <Content Remove="WebApplication\obj\WebApplication2.csproj.nuget.dgspec.json" />
+    <Content Remove="WebApplication\obj\Debug\netcoreapp3.1\project.razor.json" />
+    <Content Remove="WebApplication\Properties\launchSettings.json" />
+    <Content Remove="WebApplication\data\acount.json" />
+    <Content Remove="data\acount.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+  </ItemGroup>
+</Project>
