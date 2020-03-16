@@ -1,190 +1,190 @@
 .album_footer {
-    background-color: beige;
-    padding: 10px;
-    text-align: center;
-    margin-top: 550px;
+  background-color: beige;
+  padding: 10px;
+  text-align: center;
+  margin-top: 550px;
 }
 
 .home-footer {
-    background-color: beige;
-    padding: 10px;
-    text-align: center;
-    margin-top: 150px;
+  background-color: beige;
+  padding: 10px;
+  text-align: center;
+  margin-top: 150px;
 }
 
 body {
-    font-family: montserrat;
+  font-family: montserrat;
 }
 
 .left-box {
-    flex-basis: 30%;
-    padding: 10px;
-    align-self: flex-start;
-    text-align: center;
+  flex-basis: 30%;
+  padding: 10px;
+  align-self: flex-start;
+  text-align: center;
 }
 
 .right-box {
-    border: 0.5px solid grey;
-    border-radius: 10px;
-    flex-basis: 45%;
-    padding: 10px;
-    align-self: flex-start;
+  border: 0.5px solid grey;
+  border-radius: 10px;
+  flex-basis: 45%;
+  padding: 10px;
+  align-self: flex-start;
 }
 
 @media screen and (max-width: 600px) {
-    .left-box {
-        border: solid grey;
-        flex-basis: 100%;
-        padding: 10px;
-        text-align: center;
-    }
-    .right-box {
-        border: solid grey;
-        flex-basis: 100%;
-        padding: 10px;
-        margin-top: 30px;
-    }
+  .left-box {
+    border: solid grey;
+    flex-basis: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .right-box {
+    border: solid grey;
+    flex-basis: 100%;
+    padding: 10px;
+    margin-top: 30px;
+  }
 }
 
 .top-box {
-    flex-basis: 30%;
-    border: solid yellow;
-    border-radius: 5px;
-    text-align: center;
+  flex-basis: 30%;
+  border: solid yellow;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .bottom-box {
-    flex-basis: 60%;
-    border: solid yellow;
+  flex-basis: 60%;
+  border: solid yellow;
 }
 
 h4 {
-    display: block;
-    margin: 30px;
-    text-decoration: none;
+  display: block;
+  margin: 30px;
+  text-decoration: none;
 }
 
 .city {
-    margin: 20px;
+  margin: 20px;
 }
 
 .city:hover {
-    color: rgb(73, 73, 69);
+  color: rgb(73, 73, 69);
 }
 
 table {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 table td,
 th {
-    border: 1px solid #ddd;
-    padding: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #d43333;
 }
 
 table tr:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: rgb(8, 148, 80);
-    color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(8, 148, 80);
+  color: white;
 }
 
 .h {
-    cursor: pointer;
-    color: gray;
-    width: 150px;
-    margin: 10px;
+  cursor: pointer;
+  color: gray;
+  width: 150px;
+  margin: 10px;
 }
 
 .h:hover {
-    color: green;
+  color: green;
 }
 
 .table-container {
-    width: 100%;
+  width: 100%;
 }
 
 .table-container th {
-    border: 1px solid #ddd;
-    padding: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 menu {
-    padding: 10px;
-    border-radius: 10px;
-    text-align: left;
-    padding-left: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .vertical-menu {
-    width: 200px;
-    height: 300px;
-    overflow-y: auto;
-    background-color: #eee;
-    margin: 0 auto;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  width: 200px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #eee;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .vertical-menu a {
-    background-color: #eee;
-    color: black;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
 }
 
 .vertical-menu menu:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 .menu-header {
-    background-color: burlywood;
-    text-align: center;
-    color: white;
-    height: 50px;
-    width: 200px;
-    display: inline-block;
+  background-color: burlywood;
+  text-align: center;
+  color: white;
+  height: 50px;
+  width: 200px;
+  display: inline-block;
 }
 
 .vertical-menu a.active2 {
-    background-color: burlywood;
-    color: white;
+  background-color: burlywood;
+  color: white;
 }
 
 #loadBtn:hover {
-    background-color: rgb(153, 111, 56);
+  background-color: rgb(153, 111, 56);
 }
 
 ul:hover {
-    color: bisque;
+  color: bisque;
 }
 
 .movingImg {
-    position: relative;
-    margin: 0 auto;
-    width: 70px;
-    height: 50px;
-    background: url("../assets/duck.png");
+  position: relative;
+  margin: 0 auto;
+  width: 70px;
+  height: 50px;
+  background: url("../assets/duck.png");
 }
 
 .flag {
-    border-radius: 5px;
-    border: 1px burlywood;
+  border-radius: 5px;
+  border: 1px burlywood;
 }
 
 .flag:hover {
-    border-radius: 5px;
-    background-color: burlywood;
+  border-radius: 5px;
+  background-color: burlywood;
 }
