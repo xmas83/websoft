@@ -169,6 +169,47 @@ Injection: for example, the input from a user is //select * from person where na
 </p>
 </section>
 
+<section>
+<h2>S10</h2>
+<p>
+
+1)	Write a general paragraph about how the project was implemented. Problems / solutions / simple / difficult / fast / long time, etc. Was the project easy or difficult? Did it take a long time? What was difficult and what went easy? Was this a good and reasonable project for this course? How was it to work in a team?
+
+Answer: The forntend was built with JavaScript and React.js and the backend (server) with Node.js and express.js and the DB was built with Postgresql.
+After creating the frontend, server and DB, the server and the DB were connected through Knex.js as it works pretty well with Postgresql, MariaDB or any relational database. 
+Then postman was used to test the server and making sure all endpoints are connected to the frontend and working. The server and the client communicate over HTTP.
+
+After setting up the server we planned the API. I think planning the API is something that every developer needs to consider before jump to the coding and the reason is that, you as a developer want to make sure that what your API design is going to look like.
+The endpoints:
+Root route res = this is working.
+Signing route which is a POST request to allow the user to sign in. Sign In = POST
+Register route which is also a POST request. Register = POST to add the data to the database.
+A Profile/:userId which is a GET request and it will return a user.
+And also, an image endpoint which is going to be a PUT request and it return the updated user object or anything else we update like, a counter or etc.
+
+For the security we used bcrypt-node.js library. It allows to create a very secure login by hashing the user’s password.
+For the security when sending sensitive information from the frontend to the server using HTTPS in a POST body and to store the password into the DB, bcrypt is used so, every time the user signs in , it does check the hash stored in the DB with the user’s input.
+
+During implementing the security, I learned that always use HTTPS so that the data are encrypted and won’t be attacked by hackers and also never store the password in plain text but instead try to hash the password. For this you can use npm packages such as argon2, scrypt or bcrypt and for this project bcrypt was implemented. 
+
+One of the issues we had during this project was getting error from Chrome while loading the page we resolved the issue using Cors library. As we know, Cors is an important concept when it comes to web security. By supporting Cors request, we were able to access the data and load the pages. 
+
+2)	Finish with a final paragraph with your thoughts on the course and what you think about the material and the guide (about 5-10 sentences). Provide feedback to teachers and suggest any improvement suggestions for upcoming course opportunities. Are you satisfied / dissatisfied? Will you recommend the course to your friends / colleagues? On a scale of 1-10, what grade do you give the course?
+
+Answer: The martial of the course was very helpful IMHO. I believe learning through doing a project is more effective rather than some PPTS and code snippets and this course totally met my expectations considering this perspective. 
+The teacher also provided us with different technologies including Gitter which was very helpful and made the communication with the teacher way too easier. On the other hand, we learnt a new technology which can help us in the near future when working in a team.
+My suggestion to improve the course for the better is that, as we did use a lot of JS perhaps using more industry-used JavaScript related frameworks such as React, Vue.js can be more helpful for the students and it also makes the course material as a whole more up to date. 
+I am totally satisfied with the course and I’m so happy I made it this far and I highly recommend this course to anyone who is interested in learning web development. 
+My grade to the course is 4.
+
+
+3)	What is your final TIL for this course?
+Answer: I learned a lot about web security as well as the server side and as I used React.js for the frontend of our application, I had the chance to improve my React skills and take it to the next level. 
+
+
+</p>
+</section>
+
 
 
 <footer>
