@@ -1,33 +1,17 @@
-.album_footer {
-  background-color: beige;
-  padding: 10px;
-  text-align: center;
-  margin-top: 550px;
-}
-
-.home-footer {
-  background-color: beige;
-  padding: 10px;
-  text-align: center;
-  margin-top: 150px;
-}
-
-body {
-  font-family: montserrat;
-}
-
 .left-box {
-  flex-basis: 30%;
-  padding: 10px;
+  border: 0.5px solid grey;
+  border-radius: 30px;
+  flex-basis: 10%;
+  padding: 50px;
   align-self: flex-start;
   text-align: center;
 }
 
 .right-box {
   border: 0.5px solid grey;
-  border-radius: 10px;
+  border-radius: 100px;
   flex-basis: 45%;
-  padding: 10px;
+  padding: 50px;
   align-self: flex-start;
 }
 
@@ -41,8 +25,10 @@ body {
   .right-box {
     border: solid grey;
     flex-basis: 100%;
-    padding: 10px;
+    padding: 50px;
     margin-top: 30px;
+    border: solid 0.5px;
+    border-radius: 100%;
   }
 }
 
@@ -51,6 +37,8 @@ body {
   border: solid yellow;
   border-radius: 5px;
   text-align: center;
+  border: solid 0.5px;
+  border-radius: 100%;
 }
 
 .bottom-box {
@@ -85,7 +73,7 @@ th {
 }
 
 table tr:nth-child(even) {
-  background-color: #d43333;
+  background-color: #f2f2f2;
 }
 
 table tr:hover {
@@ -96,7 +84,7 @@ table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: rgb(8, 148, 80);
+  background-color: rgb(68, 170, 107);
   color: white;
 }
 
@@ -108,7 +96,7 @@ table th {
 }
 
 .h:hover {
-  color: green;
+  color: rgb(68, 170, 107);
 }
 
 .table-container {
@@ -116,7 +104,7 @@ table th {
 }
 
 .table-container th {
-  border: 1px solid rgb(47, 66, 53);
+  border: 1px solid #ddd;
   padding: 8px;
 }
 
@@ -128,10 +116,10 @@ menu {
 }
 
 .vertical-menu {
-  width: 200px;
+  width: 300px;
   height: 300px;
   overflow-y: auto;
-  background-color: #eee;
+  background-color: rgb(68, 170, 107);
   margin: 0 auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -146,20 +134,20 @@ menu {
 }
 
 .vertical-menu menu:hover {
-  background-color: #ccc;
+  background-color: rgb(152, 197, 156);
 }
 
 .menu-header {
-  background-color: burlywood;
+  background-color: rgb(38, 170, 148);
   text-align: center;
   color: white;
   height: 50px;
-  width: 200px;
+  width: 300px;
   display: inline-block;
 }
 
 .vertical-menu a.active2 {
-  background-color: burlywood;
+  background-color: rgb(85, 182, 114);
   color: white;
 }
 
@@ -169,22 +157,4 @@ menu {
 
 ul:hover {
   color: bisque;
-}
-
-.movingImg {
-  position: relative;
-  margin: 0 auto;
-  width: 70px;
-  height: 50px;
-  background: url("../assets/duck.png");
-}
-
-.flag {
-  border-radius: 5px;
-  border: 1px burlywood;
-}
-
-.flag:hover {
-  border-radius: 5px;
-  background-color: burlywood;
 }

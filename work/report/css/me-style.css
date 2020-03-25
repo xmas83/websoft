@@ -1,0 +1,30 @@
+.profile {
+  justify-content: space-between;
+  display: flex;
+  border-radius: 5%;
+  width: 70%;
+  padding: 25px;
+  border: 0.5px solid;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.picture {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  padding: 3px;
+}
+
+.details {
+  width: 70%;
+  border-radius: 5%;
+  background-color: rgb(114, 175, 139);
+  text-align: start;
+  padding: 20px;
+}
+
+.d {
+  margin: 10px;
+}
